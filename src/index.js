@@ -7,6 +7,7 @@ import DashboardView from './components/dashboardView'
 import NewBook from './components/newBook';
 import BooksView  from './components/booksView';
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -17,6 +18,7 @@ root.render(
     <Route path="dashboard" element={<DashboardView />} />
     <Route path="addbook" element={<NewBook />} />
     <Route path="bookview" element={<BooksView />} />
+
       {/* <Route path="dashboard/:uid" element={<DashboardView />} /> */}
       {/* <Route path="dashboard/profile" element={<EditProfile />} */}
 
