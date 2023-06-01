@@ -1,19 +1,20 @@
-import { Tab } from '@headlessui/react'
+//import { Tab } from '@headlessui/react'
 import { Fragment, useState } from 'react'
 import { Listbox, Transition } from '@headlessui/react'
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 import  BooksView from './booksView'
 
-const people = [
+
+const options = [
   { name: 'Search' },
   { name: 'Filter' },
-  { name: 'Order' },
   { name: 'Favorite' },
 
 ]
 
 export default function DashboardView() {
-  const [selected, setSelected] = useState(people[0])
+  const [selected, setSelected] = useState(options)
+
 
   return (
     <>
@@ -40,7 +41,7 @@ export default function DashboardView() {
             leaveTo="opacity-0"
           >
             <Listbox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
-              {people.map((person, personIdx) => (
+              {options.map((person, personIdx) => (
                 <Listbox.Option
                   key={personIdx}
                   className={({ active }) =>
@@ -73,6 +74,9 @@ export default function DashboardView() {
         </div>
       </Listbox>
     </div>
+
+
+
 
     </>
   )
