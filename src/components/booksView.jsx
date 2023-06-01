@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/booksView.css';
 import DataTable from 'react-data-table-component';
-import ReactDOM from "react-dom";
+
 import { Dialog } from '@headlessui/react'
 
 export default function BooksView() {
@@ -30,28 +30,41 @@ export default function BooksView() {
 
 
     function onClickDetails(event, rowid) {
-
-        const datos = books.find(dato => dato.isbn == rowid)
+        const datos = books.find(dato => dato.isbn === rowid)
         setFilterData(datos)
         openModal()
-
     }
 
-    const onChange = async (e) => {
-        const searchData = books.filter((item) => {
+
+    const [searchData, setSearchData] = useState([]);
+
+
+
+    const onChange = (e) => {
+         //  setSearchData(books);
+
+
+
+        const searchDataBooks = books.filter((item) => {
+            //   console.log("item en const searchDAtaBooks", item.name)
             if (
                 item.name
                     .toString()
-                    .toLowerCase()
-                    .includes(e.target.value.toLowerCase())
+                    .toLowerCase().includes(e.target.value.toLowerCase())
+
             ) {
+
                 return item;
+
             }
+
         });
-       
-        setBooks(searchData);
-        
+        console.log("searchDataBooks variable target", searchDataBooks)
+
+        setBooks(searchDataBooks)
+        console.log("setBooks", setBooks)
     };
+
 
     const columns = [
         {
@@ -63,7 +76,7 @@ export default function BooksView() {
             name:
                 <div>
                     NAME <br />
-                    <input type="text" onChange={onChange} style={{ width: "80%", border: "10px" }} />
+                    <input id='search' type="text" onChange={onChange} style={{ width: "80%", border: "10px" }} />
                 </div>,
             selector: row => row.campo2,
             sortable: true
@@ -85,9 +98,9 @@ export default function BooksView() {
         ))
 
 
-    useEffect(() => {fetchBooks();}, []);
+    useEffect(() => { fetchBooks(); }, []);
 
-        
+
     return (
         <>
             <div className="container">
@@ -139,5 +152,3 @@ export default function BooksView() {
     );
 
 }
-const rootElement = document.getElementById("root");
-ReactDOM.render(<BooksView />, rootElement);
