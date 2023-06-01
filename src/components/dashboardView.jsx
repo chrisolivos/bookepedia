@@ -3,6 +3,7 @@ import { Fragment, useState } from 'react'
 import { Listbox, Transition } from '@headlessui/react'
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 import  BooksView from './booksView'
+import DataGridDemo from './busqueda'
 
 
 const options = [
@@ -19,7 +20,7 @@ export default function DashboardView() {
   return (
     <>
         <div className='container-booksView'>
-      < BooksView />
+      < DataGridDemo />
     </div>
     
     <div className="fixed top-10 w-72">

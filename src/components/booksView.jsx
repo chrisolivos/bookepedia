@@ -36,21 +36,33 @@ export default function BooksView() {
     }
 
 
-    const [searchData, setSearchData] = useState([]);
+    const [searchData, setSearchData] = useState(" ");
 
 
 
     const onChange = (e) => {
-         //  setSearchData(books);
+        setSearchData(e.target.value);
+
+        // setBooks(books.filter((item) => {
+        //     searchData.toLowerCase() === ""
+        //         ? item
+        //         : item.name.toLowerCase().includes(searchData);
+             
+        // }))
 
 
 
         const searchDataBooks = books.filter((item) => {
             //   console.log("item en const searchDAtaBooks", item.name)
+        //    return searchData === " "
+        //             ? item
+        //             : item.name.toLowerCase().includes(searchData);
+
+
             if (
                 item.name
                     .toString()
-                    .toLowerCase().includes(e.target.value.toLowerCase())
+                    .toLowerCase().includes(searchData.toLowerCase())
 
             ) {
 
@@ -59,7 +71,7 @@ export default function BooksView() {
             }
 
         });
-        console.log("searchDataBooks variable target", searchDataBooks)
+        //console.log("searchDataBooks variable target", searchDataBooks)
 
         setBooks(searchDataBooks)
         console.log("setBooks", setBooks)
@@ -76,7 +88,7 @@ export default function BooksView() {
             name:
                 <div>
                     NAME <br />
-                    <input id='search' type="text" onChange={onChange} style={{ width: "80%", border: "10px" }} />
+                    <input  type="text"  onChange={onChange} style={{ width: "80%", margin: "10px" }} />
                 </div>,
             selector: row => row.campo2,
             sortable: true
