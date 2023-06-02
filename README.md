@@ -1,70 +1,134 @@
-# Getting Started with Create React App
+# Bookepedia
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Índice
 
-## Available Scripts
+* [1. Preámbulo](#1-preámbulo)
+* [2. Resumen del proyecto](#2-resumen-del-proyecto)
+* [3. Historias de Usuario](#3-historias-de-usuario)
+* [4. Boiler Plate](#4-boiler-plate)
+* [5. Proceso de interacción](#5-proceso-de-interacción)
 
-In the project directory, you can run:
 
-### `npm start`
+***
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 1. Preámbulo
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+El universo de la lectura es muy impresionable, puedes viajar a lugares mágicos e inesperados, puedes vivir un sin fin de aventuras, también puedes ser parte de la historia de algún personaje, puede darte mucha información, conocimientos; es así como un libro te lleva a volar y desconecta de la realidad. 
+ 
+## 2. Resumen del proyecto
+Bookepedia, es una aplicación pensada en la personas que gustan de la lectura, aquí podrán encontrar datos importantes de sus libros favoritos y también podrán agregar un libro que recomienden.
 
-### `npm test`
+## 3. Historias de Usuario
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Historia 1:
 
-### `npm run build`
+Quiero: Poder ver la relación de todos los libros.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Para: Para saber su nombre, author y otros datos.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Criterios de Aceptación:
+La página debe mostrar  todos los libiros con su nombre, ISBN.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Definición de terminado:
+Que el usuario pueda visualizar toda la lista de los libros.
 
-### `npm run eject`
+Historia 2:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Quiero: Poder ver el detalle de un libro al darle click.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Para: Para ver los demás datos.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Criterios de Aceptación:
+La página debe mostrar los detalles del libro al dar click.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Definición de terminado:
+Que el usuario pueda visualizar los detalles del libro al dar click.
 
-## Learn More
+Historia 3:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Quiero: Poder realizar búsquedas y filtrar información.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Para: Poder encontrar más rápido un libro. 
 
-### Code Splitting
+Criterios de Aceptación:
+La página debe permitir al usuario buscar y filtrar libros. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Definición de terminado:
+Que el usuario pueda visualizar el libro buscado o filtrado. 
 
-### Analyzing the Bundle Size
+Historia 4:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Quiero: Poder ordenar los libros. 
 
-### Making a Progressive Web App
+Para: Poder verlos en el orden deseado.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Criterios de Aceptación:
+La página debe permitir ordenar los libros (Asc -Desc)
 
-### Advanced Configuration
+Definición de terminado:
+Que el usuario pueda ordenar los libros (Asc -Desc).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Historia 5:
 
-### Deployment
+Quiero: Poder ver mi listado de libros favoritos
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Para: Ver la relación de libros marcados como favoritos. 
 
-### `npm run build` fails to minify
+Criterios de Aceptación:
+La página debe permitir al usuario visualizar los libros que tiene marcados como favoritos.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Definición de terminado:
+Que el usuario pueda visualizar los libros que marcó como favoritos. 
+
+## 4. Boiler Plate
+.
+
+├── src
+
+|  ├── components 
+
+|  |  ├── booksView.jsx
+
+|  |  ├── dashboardView.jsx
+
+|  |  ├── favoriteBooks.jsx
+
+|  |  └── newBooks.jsx
+
+|  ├── images
+
+|  |  └── background.jpg
+
+|  ├── styles
+
+|  |  ├── booksView.css
+
+|  |  ├── dashboardView.css
+
+|  |  ├── favoriteBooks.css
+
+|  |  └── newBooks.css
+
+|   └── test
+
+|   ├── app.test.js
+
+├── .gitignore
+
+├── package-lock.json
+
+├── package.json
+
+├── README.md
+
+├── tailwind.config.js
+
+## 5. Proceso de interacción
+-	Pantalla principal: La primera pantalla nos permitirá acceder dandole click al botón Start
+
+Pantalla de Principal:
+
+![Pantalla de principal](https://github.com/chrisolivos/DEV003-cipher/blob/main/src/Images/Terminado/acceso.png)
+
+
+
