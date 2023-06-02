@@ -6,8 +6,8 @@ import {BrowserRouter, Route, Routes } from 'react-router-dom'
 import DashboardView from './components/dashboardView'
 import NewBook from './components/newBook';
 import BooksView  from './components/booksView';
-import Busqueda from './components/busqueda';
-import MyTabs from './components/vistamenu';
+// import Busqueda from './components/busqueda';
+// import MyTabs from './components/vistamenu';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -20,9 +20,9 @@ root.render(
     <Route path="dashboard" element={<DashboardView />} />
     <Route path="addbook" element={<NewBook />} />
     <Route path="bookview" element={<BooksView />} />
-    <Route path="busqueda" element={<Busqueda />} />
+    {/* <Route path="busqueda" element={<Busqueda />} />
 
-    <Route path="menutabs" element={<MyTabs />} />
+    <Route path="menutabs" element={<MyTabs />} /> */}
 
       {/* <Route path="dashboard/:uid" element={<DashboardView />} /> */}
       {/* <Route path="dashboard/profile" element={<EditProfile />} */}

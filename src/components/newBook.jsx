@@ -6,24 +6,31 @@ import '../styles/newbook.css'
 // which keys are symmetrical to our values/initialValues
 const validate = values => {
   const errors = {};
-  if (!values.firstName) {
-    errors.firstName = 'Required';
-  } else if (values.firstName.length > 15) {
-    errors.firstName = 'Must be 15 characters or less';
+  // const regExp = ([0-9]{3}-[0-9]{10});
+  // const found = data.match(regExp);
+  if (!values.isbnBook) {
+    errors.isbnBook = 'Required';
+  } else if (!/^[0-9]{3}-[0-9]{10}$/i.test(values.isbnBook)) {
+    errors.isbnBook = 'Invalid ISBN';
   }
 
-  if (!values.lastName) {
-    errors.lastName = 'Required';
-  } else if (values.lastName.length > 20) {
-    errors.lastName = 'Must be 20 characters or less';
+  if (!values.authors) {
+    errors.authors = 'Required';
+  } else if (values.authors.length > 20) {
+    errors.authors = 'Must be 20 characters or less';
   }
 
-  if (!values.email) {
-    errors.email = 'Required';
-  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-    errors.email = 'Invalid email address';
+  if (!values.country) {
+    errors.country = 'Required';
+  } else if (values.country.length > 20) {
+    errors.country = 'Must be 20 characters or less';
   }
-
+  if (!values.publisher) {
+    errors.publisher = 'Required';
+  } else if (values.publisher.length > 20) {
+    errors.publisher = 'Must be 20 characters or less';
+  }
+  
   return errors;
 };
 
@@ -33,9 +40,10 @@ export default function NewBook(){
   // be called when the form is submitted
   const formik = useFormik({
     initialValues: {
-      firstName: '',
-      lastName: '',
-      email: '',
+      isbnBook: '',
+      authors: '',
+      country: '',
+      publisher:''
     },
     validate,
     onSubmit: values => {
@@ -43,38 +51,56 @@ export default function NewBook(){
     },
   });
   return (
-    <form onSubmit={formik.handleSubmit}>
-      <label htmlFor="firstName">First Name</label>
+    <div className='container-form-newbook'>
+      <div className='card-form'>
+    <form onSubmit={formik.handleSubmit} className='form-newbook'>
+      <label htmlFor="isbnBook">ISBN</label>
       <input className='input'
-        id="firstName"
-        name="firstName"
+        id="isbnBook"
+        name="isbnBook"
+        type="text"
+        placeholder='###-##########'
+        onChange={formik.handleChange}
+        value={formik.values.isbnBook}
+      />
+      {formik.errors.isbnBook ? <div>{formik.errors.isbnBook}</div> : null}
+
+      <label htmlFor="authors">Authors</label>
+      <input className='input'
+        id="authors"
+        name="authors"
         type="text"
         onChange={formik.handleChange}
-        value={formik.values.firstName}
+        value={formik.values.authors}
       />
-      {formik.errors.firstName ? <div>{formik.errors.firstName}</div> : null}
+      {formik.errors.authors ? <div>{formik.errors.authors}</div> : null}
 
-      <label htmlFor="lastName">Last Name</label>
+
+      <label htmlFor="country">Country</label>
       <input className='input'
-        id="lastName"
-        name="lastName"
+        id="country"
+        name="country"
         type="text"
         onChange={formik.handleChange}
-        value={formik.values.lastName}
+        value={formik.values.country}
       />
-      {formik.errors.lastName ? <div>{formik.errors.lastName}</div> : null}
+      {formik.errors.country ? <div>{formik.errors.country}</div> : null}
 
-      <label htmlFor="email">Email Address</label>
+
+      <label htmlFor="publisher">Publisher</label>
       <input className='input'
-        id="email"
-        name="email"
-        type="email"
+        id="publisher"
+        name="publisher"
+        type="text"
         onChange={formik.handleChange}
-        value={formik.values.email}
+        value={formik.values.publisher}
       />
-      {formik.errors.email ? <div>{formik.errors.email}</div> : null}
+      {formik.errors.publisher ? <div>{formik.errors.publisher}</div> : null}
+
 
       <button className='buttonSubmit' type="submit">Submit</button>
     </form>
+    </div>
+    </div>
   );
 };
