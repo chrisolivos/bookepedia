@@ -1,6 +1,10 @@
 .container-button-home{
 display: flex;
 justify-content: right;
+width: 100%;
+}
+.container-booksData{
+  width: 100%;
 }
 
 .style-button-home {
