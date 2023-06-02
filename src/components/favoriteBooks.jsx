@@ -9,6 +9,9 @@ export default function FavoriteBooks() {
         fetch("https://anapioficeandfire.com/api/books")
             .then((response) => response.json())
             .then((data) => setBooks(data))
+            .catch((error)=> 
+            console.log('Error : ',error.message)
+        )
     };
 
     const columns = [
