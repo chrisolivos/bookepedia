@@ -5,14 +5,11 @@ import '../styles/booksView.css';
 export default function FavoriteBooks() {
     const [books, setBooks] = useState([]);
 
-
     const fetchBooks = () => {
         fetch("https://anapioficeandfire.com/api/books")
             .then((response) => response.json())
             .then((data) => setBooks(data))
     };
-
-
 
     const columns = [
         {
@@ -31,6 +28,7 @@ export default function FavoriteBooks() {
             sortable: true
         }
     ];
+
     const data =
         books?.map((item) => (
             {
@@ -41,23 +39,15 @@ export default function FavoriteBooks() {
             }
         ))
 
-
     useEffect(() => { fetchBooks(); }, []);
 
-
     return (
-
             <div className="container">
                 <DataTable
                     id={columns.isbn}
                     columns={columns}
                     data={data}
                 />
-
             </div>
-
-           
-
     );
-
 }
