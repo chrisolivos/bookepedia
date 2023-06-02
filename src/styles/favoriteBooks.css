@@ -1,0 +1,9 @@
+.container-favorites{
+    display: flex;
+    justify-content: center;
+
+}
+.container-favorite-books{
+
+    width: 60%;
+}

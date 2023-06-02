@@ -1,5 +1,22 @@
-.container-booksData{
-width: 80%;
+.container-button-home{
+display: flex;
+justify-content: right;
 }
+
+.style-button-home {
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    background-color: white;
+    color: black;
+    height: 30px;
+    width: 50px;
+    margin: 10px;
+    border-radius: 15%;
+  }
+  
+  .style-button-home:hover {
+    background-color: black; 
+    color: white;
+  }
 
 

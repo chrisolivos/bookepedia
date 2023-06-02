@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import DataTable from 'react-data-table-component';
-import '../styles/booksView.css';
+import '../styles/favoriteBooks.css';
 
 export default function FavoriteBooks() {
     const [books, setBooks] = useState([]);
@@ -25,7 +25,7 @@ export default function FavoriteBooks() {
         {
             name: "AUTHORS",
             selector: row => row.campo3,
-            sortable: true
+            sortable: true,
         }
     ];
 
@@ -42,12 +42,14 @@ export default function FavoriteBooks() {
     useEffect(() => { fetchBooks(); }, []);
 
     return (
-            <div className="container">
+        <div className='container-favorites'>
+            <div className="container-favorite-books">
                 <DataTable
                     id={columns.isbn}
                     columns={columns}
                     data={data}
                 />
             </div>
+        </div>
     );
 }
