@@ -107,6 +107,8 @@ Que el usuario pueda visualizar los libros que marcó como favoritos.
 
 |  |  |  ├── favorites.png
 
+|  |  |  ├── filter.png
+
 |  |  |  └── home.png
 
 |  |  └── background.jpg
@@ -136,11 +138,44 @@ Que el usuario pueda visualizar los libros que marcó como favoritos.
 ├── tailwind.config.js
 
 ## 5. Proceso de interacción
--	Pantalla principal: La primera pantalla nos permitirá acceder dandole click al botón Start
+-	Home: La primera pantalla nos permitirá acceder dandole click al botón Start
 
-Pantalla de Principal:
+Home:
 
-![Pantalla de principal](https://github.com/chrisolivos/bookepedia/blob/main/src/images/screen/home.png)
+![Home](https://github.com/chrisolivos/bookepedia/blob/main/src/images/screen/home.png)
+
+
+-	Dashboard: En esta vista, encontraremos la opción por seleccionada por defecto: Books, en la cual podemos ver el listado general de los libros.
+Acá también podemos visualizar las opciones: Add Book y favorites.
+Encontraremos el botón Home en la esquina superior derecha, el cual nos permite regresar a la vista principal.
+
+Dashboard:
+
+![Dashboard](https://github.com/chrisolivos/bookepedia/blob/main/src/images/screen/dashboard.png)
+
+-	Details Book: En la vista Books, podemos dar click en algún libro del listado y nos mostrará el detalle de ese libro.
+
+Details Book:
+
+![Details Book](https://github.com/chrisolivos/bookepedia/blob/main/src/images/screen/detailsView.png)
+
+-	Filer: En la vista Books, podemos dar click en los 3 puntos que aparecen en el titulo y se desplegarán opciones, ahí encontraremos la opción para filtrar
+
+Filter:
+
+![Filter](https://github.com/chrisolivos/bookepedia/blob/main/src/images/screen/filter.png)
+
+-	Add Books: En la vista Add Book, podemos agregar un libro, aquí es necesario ingresar todos los datos y también ingresar el ISBN en el formato indicado.
+
+Add Books:
+
+![Add Books](https://github.com/chrisolivos/bookepedia/blob/main/src/images/screen/addbook.png)
+
+-	Favorites: En la vista Favorites, podemos visualizar los libros marcados como favoritos por el usuario.
+
+Favorites:
+
+![Favorites](https://github.com/chrisolivos/bookepedia/blob/main/src/images/screen/favorites.png)
 
 
 
