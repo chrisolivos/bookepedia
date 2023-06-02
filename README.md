@@ -24,10 +24,10 @@ Historia 1:
 
 Quiero: Poder ver la relación de todos los libros.
 
-Para: Para saber su nombre, author y otros datos.
+Para: Saber su nombre, autor y otros datos.
 
 Criterios de Aceptación:
-La página debe mostrar  todos los libiros con su nombre, ISBN.
+La página debe mostrar todos los libros con su nombre, ISBN.
 
 Definición de terminado:
 Que el usuario pueda visualizar toda la lista de los libros.
@@ -36,7 +36,7 @@ Historia 2:
 
 Quiero: Poder ver el detalle de un libro al darle click.
 
-Para: Para ver los demás datos.
+Para: Para ver los datos adicionales.
 
 Criterios de Aceptación:
 La página debe mostrar los detalles del libro al dar click.
@@ -97,6 +97,18 @@ Que el usuario pueda visualizar los libros que marcó como favoritos.
 
 |  ├── images
 
+|  |  ├── screen
+
+|  |  |  ├── addbook.png
+
+|  |  |  ├── dashboard.png
+
+|  |  |  ├── detailsView.png
+
+|  |  |  ├── favorites.png
+
+|  |  |  └── home.png
+
 |  |  └── background.jpg
 
 |  ├── styles
@@ -128,7 +140,7 @@ Que el usuario pueda visualizar los libros que marcó como favoritos.
 
 Pantalla de Principal:
 
-![Pantalla de principal](https://github.com/chrisolivos/DEV003-cipher/blob/main/src/Images/Terminado/acceso.png)
+![Pantalla de principal](https://github.com/chrisolivos/bookepedia/blob/main/src/images/screen/home.png)
 
 
 
