@@ -145,7 +145,7 @@ Home:
 ![Home](https://github.com/chrisolivos/bookepedia/blob/main/src/images/screen/home.png)
 
 
--	Dashboard: En esta vista, encontraremos la opción por seleccionada por defecto: Books, en la cual podemos ver el listado general de los libros.
+-	Dashboard: En esta vista, encontraremos la opción seleccionada por defecto: Books, en la cual podemos ver el listado general de los libros.
 Acá también podemos visualizar las opciones: Add Book y favorites.
 Encontraremos el botón Home en la esquina superior derecha, el cual nos permite regresar a la vista principal.
 
@@ -171,7 +171,7 @@ Add Books:
 
 ![Add Books](https://github.com/chrisolivos/bookepedia/blob/main/src/images/screen/addbook.png)
 
--	Favorites: En la vista Favorites, podemos visualizar los libros marcados como favoritos por el usuario.
+-	Favorites: En la vista Favorites, podemos visualizar los libros marcados como favoritos por el usuario, en esta vista, también podemos ordenar los libros mostrados.
 
 Favorites:
 
