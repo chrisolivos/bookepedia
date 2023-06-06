@@ -178,4 +178,13 @@ Favorites:
 ![Favorites](https://github.com/chrisolivos/bookepedia/blob/main/src/images/screen/favorites.png)
 
 
+¿Cómo decidiste las opciones técnicas y arquitectónicas utilizadas como parte de su solución?
+En base a mi experiencia y a los requerimientos solicitados, elegí utilizar la librería MIU la cual provee funcionalidad para la busqueda, orden y filtrado de los datos en tablas, esto complementado con las herramientas sugeridas  Headless UI, Tailwind y Formik me permitió cunplir con lo esperado.
+
+¿Hay alguna mejora que dejaste pendiente de hacer en su envío?
+Lamentablemente no pude terminar de programar las pruebas unitarias del proyecto.
+
+¿Qué harías de manera diferente si se le asignara más tiempo?
+Revisar más documentación para la implementación de pruebas unitarias con la librería JEST y la utilización de Storybook.
+
 

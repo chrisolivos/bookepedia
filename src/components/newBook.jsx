@@ -7,28 +7,26 @@ const validate = values => {
 
   if (!values.isbnBook) {
     errors.isbnBook = 'Required';
-  } else if (!/^[0-9]{3}-[0-9]{10}$/i.test(values.isbnBook)) {
+  } 
+  
+  if (!/^[0-9]{3}-[0-9]{10}$/i.test(values.isbnBook)) {
     errors.isbnBook = 'Invalid ISBN';
   }
 
   if (!values.authors) {
     errors.authors = 'Required';
-  } else if (values.authors.length > 20) {
-    errors.authors = 'Must be 20 characters or less';
-  }
+  } 
+  
 
   if (!values.country) {
     errors.country = 'Required';
-  } else if (values.country.length > 20) {
-    errors.country = 'Must be 20 characters or less';
-  }
+  } 
+  
 
   if (!values.publisher) {
     errors.publisher = 'Required';
-  } else if (values.publisher.length > 20) {
-    errors.publisher = 'Must be 20 characters or less';
-  }
-
+  } 
+  
   return errors;
 };
 

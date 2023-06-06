@@ -17,7 +17,7 @@ export default function BooksView() {
         setIsOpen(true)
     }
 
-    const fetchBooks = () => {
+    function fetchBooks(){
         fetch("https://anapioficeandfire.com/api/books")
             .then((response) => response.json())
             .then((data) => setBooks(data))
