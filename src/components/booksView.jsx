@@ -17,13 +17,13 @@ export default function BooksView() {
         setIsOpen(true)
     }
 
-    function fetchBooks(){
+    function fetchBooks() {
         fetch("https://anapioficeandfire.com/api/books")
             .then((response) => response.json())
             .then((data) => setBooks(data))
-            .catch((error)=> 
-            console.log('Error : ',error.message)
-        )
+            .catch((error) =>
+                console.log('Error : ', error.message)
+            )
     };
 
     const columns = [

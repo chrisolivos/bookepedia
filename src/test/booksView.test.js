@@ -12,24 +12,24 @@ const mockedFecth = {
 document.write(mockedFecth)
 
 global.fetch = jest.fn(() =>
-    Promise.resolve({
-        json: () => Promise.resolve(mockedFecth)
+    Promise.then({
+        json: () => Promise.then(mockedFecth)
     })
 )
 
 describe('Testeando componente BooksView', () => {
     beforeEach(() => {
         render(<BooksView />)
-        jest.clearAllMocks()
+      //  jest.clearAllMocks()
 
 
     })
 
     test('Deberia devolver todos los libros', async () => {
-        //  const data = await fetchBooks()
-       // expect(data).toMatchObject(mockedFecth)
-        // expect(fetch).toHaveBeenCalledTimes(1)
-        // expect(fetch).toHaveBeenCalledWith("https://anapioficeandfire.com/api/books");
+         const data = await fetchBooks()
+       expect(data).toMatchObject(mockedFecth)
+        expect(fetch).toHaveBeenCalledTimes(1)
+        expect(fetch).toHaveBeenCalledWith("https://anapioficeandfire.com/api/books");
     });
 
 

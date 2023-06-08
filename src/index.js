@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import DashboardView from './components/dashboardView'
 import NewBook from './components/newBook';
 import BooksView from './components/booksView';
-
+import FetchBooks from './configDB/fectchapi';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -18,6 +18,7 @@ root.render(
         <Route path="dashboard" element={<DashboardView />} />
         <Route path="addbook" element={<NewBook />} />
         <Route path="bookview" element={<BooksView />} />
+        <Route path="api" element={<FetchBooks />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
